@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Prakash N. | Field Biologist & Researcher</title>
+<style>
+  :root {
+    --green: #2d6a4f;
+    --green-light: #e8f5ee;
+    --green-mid: #52b788;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --bg: #ffffff;
+    --section-bg: #f9fafb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Georgia',serif;color:var(--text);background:var(--bg);line-height:1.7;}
+  a{color:var(--green);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:0 2rem;}
+  nav ul{display:flex;gap:2rem;list-style:none;max-width:860px;margin:0 auto;height:56px;align-items:center;}
+  nav a{font-family:'Arial',sans-serif;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;}
+  nav a:hover{color:var(--green);text-decoration:none;}
+
+  /* HERO */
+  .hero{max-width:860px;margin:0 auto;padding:80px 2rem 60px;}
+  .hero-tag{font-family:'Arial',sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green-mid);font-weight:700;margin-bottom:1rem;}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:normal;line-height:1.15;margin-bottom:1.2rem;letter-spacing:-.01em;}
+  .hero p{font-size:1.05rem;color:var(--muted);max-width:580px;margin-bottom:2rem;}
+  .hero-links{display:flex;flex-wrap:wrap;gap:.75rem;}
+  .hero-links a{font-family:'Arial',sans-serif;font-size:.82rem;border:1px solid var(--border);border-radius:2px;padding:.45rem .9rem;color:var(--muted);display:flex;align-items:center;gap:.4rem;transition:all .2s;}
+  .hero-links a:hover{border-color:var(--green);color:var(--green);text-decoration:none;}
+  .divider{height:1px;background:var(--border);max-width:860px;margin:0 auto;}
+
+  /* SECTIONS */
+  section{max-width:860px;margin:0 auto;padding:60px 2rem;}
+  .sec-label{font-family:'Arial',sans-serif;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--green-mid);font-weight:700;margin-bottom:1.8rem;}
+  h2{font-size:1.6rem;font-weight:normal;margin-bottom:1.4rem;letter-spacing:-.01em;}
+
+  /* ABOUT */
+  .about-text{font-size:1.02rem;color:#374151;max-width:680px;}
+
+  /* EXPERIENCE */
+  .exp-item{display:grid;grid-template-columns:180px 1fr;gap:1.5rem;padding:1.8rem 0;border-top:1px solid var(--border);}
+  .exp-item:last-child{border-bottom:1px solid var(--border);}
+  .exp-meta{font-family:'Arial',sans-serif;}
+  .exp-meta .period{font-size:.8rem;color:var(--muted);margin-bottom:.3rem;}
+  .exp-meta .org{font-size:.85rem;font-weight:700;color:var(--green);}
+  .exp-meta .loc{font-size:.78rem;color:var(--muted);}
+  .exp-content .role{font-size:1.05rem;font-weight:600;margin-bottom:.6rem;font-family:'Arial',sans-serif;}
+  .exp-content .project{font-size:.88rem;font-style:italic;color:var(--green-mid);margin-bottom:.5rem;font-family:'Arial',sans-serif;}
+  .exp-content ul{padding-left:1.1rem;font-size:.93rem;color:#4b5563;}
+  .exp-content ul li{margin-bottom:.35rem;}
+
+  /* PUBLICATIONS */
+  .pub-card{border-left:3px solid var(--green-mid);padding:.9rem 1.2rem;background:var(--green-light);margin-bottom:1rem;border-radius:0 4px 4px 0;}
+  .pub-card .pub-title{font-size:.97rem;font-weight:600;margin-bottom:.3rem;}
+  .pub-card .pub-meta{font-size:.83rem;color:var(--muted);font-family:'Arial',sans-serif;}
+  .pub-card .pub-status{display:inline-block;font-size:.75rem;font-family:'Arial',sans-serif;background:var(--green);color:#fff;padding:.1rem .5rem;border-radius:2px;margin-top:.4rem;}
+
+  /* SKILLS */
+  .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;}
+  .skill-group h3{font-family:'Arial',sans-serif;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:.7rem;}
+  .tags{display:flex;flex-wrap:wrap;gap:.4rem;}
+  .tag{font-family:'Arial',sans-serif;font-size:.8rem;background:var(--section-bg);border:1px solid var(--border);padding:.25rem .65rem;border-radius:2px;color:#374151;}
+
+  /* EDUCATION */
+  .edu-item{padding:1.4rem 0;border-top:1px solid var(--border);}
+  .edu-item:last-child{border-bottom:1px solid var(--border);}
+  .edu-deg{font-size:1rem;font-weight:600;font-family:'Arial',sans-serif;}
+  .edu-uni{font-size:.92rem;color:var(--green);margin:.2rem 0;}
+  .edu-meta{font-size:.83rem;color:var(--muted);font-family:'Arial',sans-serif;}
+
+  /* CONTACT */
+  .contact-bg{background:var(--section-bg);}
+  .contact-inner{max-width:860px;margin:0 auto;padding:60px 2rem;}
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.2rem;margin-top:2rem;}
+  .contact-card{border:1px solid var(--border);padding:1.2rem;border-radius:4px;background:#fff;}
+  .contact-card .c-label{font-family:'Arial',sans-serif;font-size:.73rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem;}
+  .contact-card .c-val{font-size:.9rem;font-weight:600;color:var(--green);word-break:break-all;}
+
+  /* FOOTER */
+  footer{text-align:center;padding:2rem;font-family:'Arial',sans-serif;font-size:.78rem;color:var(--muted);}
+
+  @media(max-width:620px){
+    .exp-item{grid-template-columns:1fr;}
+    .exp-meta{display:flex;flex-wrap:wrap;gap:.5rem;align-items:baseline;}
+    .exp-meta .org{margin-right:.5rem;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">Field Biologist &amp; Ecologist</div>
+  <h1>Prakash N.</h1>
+  <p>Dedicated researcher in biodiversity assessment, ecological restoration, and socio-ecological studies — guided by a passion for rewilding, habitat restoration, and sustainable agriculture.</p>
+  <div class="hero-links">
+    <a href="mailto:prakashnarayanappa9@gmail.com">✉ prakashnarayanappa9@gmail.com</a>
+    <a href="https://www.linkedin.com/in/prakash-n-" target="_blank">in LinkedIn</a>
+    <a href="#">📍 Bengaluru, Karnataka</a>
+    <a href="tel:+919731151631">📞 +91 97311 51631</a>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec-label">About</div>
+  <p class="about-text">
+    I am a field biologist and researcher with hands-on experience spanning vegetation surveys, long-term ecological monitoring, GIS-based biodiversity assessments, and socio-ecological fieldwork across Karnataka and Andhra Pradesh. My work spans from the Western Ghats to coffee agroforestry landscapes, with a growing interest in plant-pollinator network dynamics, thermal tolerance of tropical trees, and evidence-based conservation. I am comfortable leading field teams, collaborating across disciplines, and translating raw ecological data into actionable restoration strategies.
+  </p>
+</section>
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="sec-label">Professional Experience</div>
+
+  <div class="exp-item">
+    <div class="exp-meta">
+      <div class="period">Nov 2025 – Present</div>
+      <div class="org">Forestry College Ponnampet &amp; ETH Zurich</div>
+      <div class="loc">Kodagu, Karnataka</div>
+    </div>
+    <div class="exp-content">
+      <div class="role">Young Professional II</div>
+      <div class="project">Cross-Scale Plant-Pollinator Network Dynamics</div>
+      <ul>
+        <li>Investigating the effect of land use in shaping plant-pollinator interactions in Indian coffee agroforestry.</li>
+        <li>Understanding local and landscape-level factors governing complex plant-pollinator dynamics in tropical agroforestry systems.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-meta">
+      <div class="period">Apr 2025 – Present</div>
+      <div class="org">Kuvempu University</div>
+      <div class="loc">Shivamogga, Karnataka</div>
+    </div>
+    <div class="exp-content">
+      <div class="role">Researcher</div>
+      <div class="project">Long-Term Ecological Monitoring (LTEM) · Photosynthetic Thermal Tolerance</div>
+      <ul>
+        <li>Established a permanent ecological monitoring plot in collaboration with Kuvempu University and NCBS.</li>
+        <li>Conducted baseline data collection: plant censuses, species identification, dendrometer installation, and QR coding systems.</li>
+        <li>Investigating thermal tolerance mechanisms of tree species in Western Ghats tropical forests.</li>
+        <li>Performing field sampling and thermal tolerance measurements to assess species adaptation to heat stress.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-meta">
+      <div class="period">Aug 2023 – Jan 2025</div>
+      <div class="org">Treeties Network Pvt. Ltd.</div>
+      <div class="loc">Bengaluru</div>
+    </div>
+    <div class="exp-content">
+      <div class="role">Field Officer</div>
+      <div class="project">Project Vatika, Agastya International Foundation, Kuppam AP · Lake Front Biodiversity Park, Tondanoor, Mandya</div>
+      <ul>
+        <li>Led field operations for vegetation surveys across a 172-acre campus using GIS and drone technology.</li>
+        <li>Developed a Digital Tree Registry by integrating drone imagery and field data for biodiversity analysis.</li>
+        <li>Managed day-to-day operations for a biodiversity park including species selection, procurement, and planting.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-meta">
+      <div class="period">Nov 2021 – Jul 2023</div>
+      <div class="org">ATREE</div>
+      <div class="loc">Bengaluru</div>
+    </div>
+    <div class="exp-content">
+      <div class="role">Research Assistant</div>
+      <div class="project">Seasonal Monitoring &amp; Evaluation of Ecological Restoration Sites, Bagepalli, Karnataka</div>
+      <ul>
+        <li>Conducted extensive fieldwork on biophysical and socioeconomic variables: vegetation, water, soil, insects, birds, land use, and livelihoods.</li>
+        <li>Designed and executed research protocols; produced technical reports from statistical, qualitative, and quantitative analyses.</li>
+        <li>Trained and supervised junior field assistants in baseline assessments across Devadurga, Raichur, and Koppal districts.</li>
+        <li>Collected baselines for lake restoration design at Choodasandra Lake, Bengaluru.</li>
+        <li>Conducted household interviews on gomala (grazing) land use in the grasslands of Bagepalli.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-meta">
+      <div class="period">Dec 2016 – Mar 2017</div>
+      <div class="org">I &amp; B Seeds Pvt. Ltd.</div>
+      <div class="loc">Bengaluru</div>
+    </div>
+    <div class="exp-content">
+      <div class="role">Intern</div>
+      <div class="project">Marker Assisted Selection, Tissue Culture &amp; Breeding Techniques</div>
+      <ul>
+        <li>Conducted MAS for screening cytoplasmic male sterility in winter chilli lines.</li>
+        <li>Assisted in screening FS tomato breeding lines for various resistances.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="sec-label">Publications</div>
+  <div class="pub-card">
+    <div class="pub-title">Decoupled phenology and PSII thermal plasticity in seasonally dry tropical forest trees</div>
+    <div class="pub-meta">Tiwari R., Bhagawad P. T., Naik H. S., Hosamani R. G., <strong>Prakash N.</strong>, Jayanath Babu M. S., … &amp; Kambalagere Y. (2026)</div>
+    <div class="pub-meta" style="margin-top:.3rem;"><em>Plant, Cell &amp; Environment</em></div>
+    <span class="pub-status">Under Review</span>
+  </div>
+  <p style="font-size:.87rem;color:var(--muted);margin-top:1rem;font-family:'Arial',sans-serif;">
+    Poster: <em>"Baseline Ecological Assessment of Vegetation in LTEM Station, Kuvempu University"</em> — Symposium on Frontiers in Biological Sciences, National Academy of Sciences India &amp; Kuvempu University, Sep 2025.
+  </p>
+</section>
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec-label">Skills &amp; Tools</div>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h3>Field &amp; Ecology</h3>
+      <div class="tags">
+        <span class="tag">Vegetation Surveys</span>
+        <span class="tag">Biodiversity Assessment</span>
+        <span class="tag">Species Identification</span>
+        <span class="tag">Ecological Restoration</span>
+        <span class="tag">Long-term Monitoring</span>
+        <span class="tag">Plant-Pollinator Dynamics</span>
+        <span class="tag">Thermal Tolerance Measurements</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Software</h3>
+      <div class="tags">
+        <span class="tag">QGIS</span>
+        <span class="tag">R for Ecologists</span>
+        <span class="tag">MS Excel</span>
+        <span class="tag">MS Word</span>
+        <span class="tag">MS PowerPoint</span>
+        <span class="tag">GIS &amp; Drone Tech</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Research Methods</h3>
+      <div class="tags">
+        <span class="tag">Statistical Analysis</span>
+        <span class="tag">FGD &amp; Interviews</span>
+        <span class="tag">Socio-ecological Studies</span>
+        <span class="tag">Technical Reporting</span>
+        <span class="tag">Survey Design</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Languages</h3>
+      <div class="tags">
+        <span class="tag">Kannada (Native)</span>
+        <span class="tag">Telugu (Native)</span>
+        <span class="tag">English (Fluent)</span>
+        <span class="tag">Tamil (Intermediate)</span>
+        <span class="tag">Hindi (Intermediate)</span>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="sec-label">Education</div>
+  <div class="edu-item">
+    <div class="edu-deg">M.Sc. in Environmental Science</div>
+    <div class="edu-uni">Kuvempu University, Shivamogga, Karnataka</div>
+    <div class="edu-meta">2021 &nbsp;·&nbsp; CGPA 7.49/10 &nbsp;·&nbsp; Key Project: Uptake &amp; bioaccumulation of Lead (Pb) in green leafy vegetables</div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-deg">B.Sc. in Agricultural Biotechnology (4 years)</div>
+    <div class="edu-uni">College of Agriculture, Hassan — UAS Bengaluru</div>
+    <div class="edu-meta">2017 &nbsp;·&nbsp; CGPA 6.92/10 &nbsp;·&nbsp; Agriculture, Biotechnology &amp; Plant Tissue Culture</div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<div class="contact-bg" id="contact">
+  <div class="contact-inner">
+    <div class="sec-label">Contact</div>
+    <h2>Get in touch</h2>
+    <p style="color:var(--muted);font-size:.95rem;max-width:480px;">Open to research collaborations, field project opportunities, and conservation initiatives across South India.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="c-label">Email</div>
+        <a class="c-val" href="mailto:prakashnarayanappa9@gmail.com">prakashnarayanappa9@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="c-label">Phone</div>
+        <a class="c-val" href="tel:+919731151631">+91 97311 51631</a>
+      </div>
+      <div class="contact-card">
+        <div class="c-label">LinkedIn</div>
+        <a class="c-val" href="https://www.linkedin.com/in/prakash-n-" target="_blank">linkedin.com/in/prakash-n-</a>
+      </div>
+      <div class="contact-card">
+        <div class="c-label">Location</div>
+        <span class="c-val" style="color:var(--text);">Bengaluru, Karnataka 560097</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2026 Prakash N. &nbsp;·&nbsp; Field Biologist &amp; Researcher
+</footer>
+
+</body>
+</html>
